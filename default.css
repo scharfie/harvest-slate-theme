@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6,ul {
 }
 
 body {
-background: #000000 url('images/43original.gif');
+/*background: #000000 url('images/43original.gif') fixed;*/
 background: #000000 url('images/40original.jpg') fixed;
 padding: 0 0px 35px 0px;
 }
