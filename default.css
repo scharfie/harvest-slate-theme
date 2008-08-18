@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5,h6,ul {
 body {
 background: #000000 url('images/43original.gif');
 background: #000000 url('images/40original.jpg') fixed;
-padding: 35px 0px 35px 0px;
+padding: 0 0px 35px 0px;
 }
 
 body,input
@@ -201,8 +201,8 @@ position: relative;
 	value (70%, 90%, etc.) or even a pixel value (760px, 800px, etc.) to enforce a fixed width.
 */
 width: 82%;
-border: solid 7px #fff;
-background-color: #fff;
+xborder: solid 4px #fff;
+background-color: none;
 margin: 0 auto;
 }
 
@@ -210,17 +210,23 @@ margin: 0 auto;
 {
 position: relative;
 width: 100%;
-height: 9.0em;
-background: #451E0E url('images/topbg.png') repeat-x;
+height: 170px;
+background: transparent url('images/harvest.png') no-repeat 10px center;
+
 /*background: #9C4E1D;*/
 margin-bottom: 2px;
 }
 
 #headercontent
 {
+  display: none;
 position: absolute;
 bottom: 0em;
 padding: 0em 2.0em 1.3em 2.0em;
+}
+
+#main {
+  background: #fff;
 }
 
 #headercontent h1 {
@@ -290,7 +296,7 @@ background: #571F04;
 background: #965008;
 xheight: 3em;
 padding: 0.8em 1.0em 0.8em 2em;
-margin: 0.5em 0 1em 0;
+margin: 0 0 1em 0;
 }
 
 #menu ul {
