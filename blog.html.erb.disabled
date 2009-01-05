@@ -10,7 +10,7 @@
 <title><%= @space.name %> | <%= @page.name %></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="stylesheet" type="text/css" href="<%= theme_path %>/default.css" />
+<!-- <link rel="stylesheet" type="text/css" href="<%= theme_path %>/default.css" /> -->
 <%= support_files %>
 </head>
 <body>
