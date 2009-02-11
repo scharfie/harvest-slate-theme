@@ -1,0 +1,46 @@
+<% extend ArticlesHelper  -%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title><%= @space.name %> | <%= @page.name %></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<%= auto_discovery_link_tag :rss, '/articles.rss', :title => 'Articles' %>
+<link rel="stylesheet" type="text/css" href="<%= theme_path %>/default.css" />
+<link rel="shortcut icon" href="<%= theme_path %>/images/cog-favicon.png" type="image/png" />
+<link rel="icon" href="<%= theme_path %>/images/cog-favicon.png" type="image/png" />
+<%= support_files %>
+</head>
+<body>
+<%= support_toolbar %>
+<div id="upbg"></div>
+
+<div id="outer">
+	<div id="header">
+		<div id="headercontent">
+			<h1>Harvest Church of God</h1>
+			<h2>Morgantown</h2>
+		</div>
+		
+		<div id="headerintro">
+		  <%= content_for :header %>
+		</div>
+	</div>
+  <div id="main">
+  <div style="clear: left; height: 1px; margin-bottom: -6px"></div>
+
+	<div id="menu">
+	  <%= site_menu %>
+	</div>
+
+	<div id="content">
+		<div id="secondarycontent">
+			<div class="box">
+				<%= content_for :sidebar %>
+			</div>
+			
+			<%= yield :extra %>
+		</div>
+		<div id="primarycontainer">
+			<div id="primarycontent">

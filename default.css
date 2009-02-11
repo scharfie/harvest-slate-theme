@@ -10,10 +10,22 @@ h1,h2,h3,h4,h5,h6,ul {
   margin: 0;
 }
 
+ul {
+  margin: 0 0 0 35px;
+}
+
 body {
-/*background: #000000 url('images/43original.gif') fixed;*/
 background: #000000 url('images/40original.jpg') fixed;
 padding: 0 0px 35px 0px;
+}
+
+#outer
+{
+z-index: 2;
+position: relative;
+width: 780px;
+background-color: none;
+margin: 0 auto;
 }
 
 body,input
@@ -60,7 +72,6 @@ h3
 {
 font-size: 1.7em;
 padding-right: 34px;
-xbackground-image: url('images/buttonbg.gif');
 }
 
 h4 {
@@ -74,9 +85,8 @@ xbackground-image: url('images/buttonbg.gif');
 /*padding-top: 1.3em;*/
 }
 
-img
-{
-border: solid 1px #6F5230;
+img {
+ border: solid 1px #6F5230;
 }
 
 img.left
@@ -96,8 +106,6 @@ margin: 0em 0em 1.8em 1.8em;
 .divider1
 {
 position: relative;
-xbackground: #fff url('images/border2.gif') repeat-x;
-xheight: 14px;
 margin: 2.0em 0em 1.5em 0em;
 clear: both;
 }
@@ -106,7 +114,7 @@ clear: both;
 {
 position: relative;
 height: 1px;
-border-bottom: solid 1px #eaeaea;
+/*border-bottom: solid 1px #eaeaea;*/
 margin: 2.0em 0em 2.0em 0em;
 }
 
@@ -151,70 +159,51 @@ background-image: url('images/icon-comments.gif');
 background-image: url('images/icon-more.gif');
 }
 
-.box
-{
-position: relative;
-background: #FDFCF6 url('images/boxbg.gif') repeat-x;
-/*left: -1.5em;*/
-top: -1.5em;
-padding: 1.5em;
-border-bottom: solid 1px #E1D2BD;
-margin-bottom: 1.0em;
+.box {
+  background: #FDFCF6 url('images/boxbg.gif') repeat-x;
+  padding: 1.5em;
+  border-bottom: solid 1px #E1D2BD;
+  margin-bottom: 1.0em;
 }
+
+.box ul {
+  list-style: square;
+  margin-left: 15px;
+}
+
 
 ul.linklist
 {
 list-style: none;
 }
 
-ul.linklist li
-{
+ul.linklist li {
 line-height: 2.0em;
 }
 
-/*#upbg
-{
-position: absolute;
-top: 0px;
-left: 0px;
-width: 100%;
-height: 275px;
-background: #fff url('images/bg2.jpg') repeat-x;
-z-index: 1;
-}
-*/
-#outer
-{
-z-index: 2;
-position: relative;
-/*
-	The width value below controls the overall width of the design. By default it's set to 82%
-	(so it'll take up 82% of the browser window's width). You can set it to a different percentage
-	value (70%, 90%, etc.) or even a pixel value (760px, 800px, etc.) to enforce a fixed width.
-*/
-width: 82%;
-xborder: solid 4px #fff;
-background-color: none;
-margin: 0 auto;
+#header {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  background: transparent url('images/harvest.png') no-repeat 10px center;
+  /*background: #9C4E1D;*/
+  margin-bottom: 2px;
 }
 
-#header
-{
-position: relative;
-width: 100%;
-height: 170px;
-background: transparent url('images/harvest.png') no-repeat 10px center;
-
-/*background: #9C4E1D;*/
-margin-bottom: 2px;
-}
-
-#headercontent
-{
+#headercontent {
   display: none;
-position: absolute;
-bottom: 0em;
-padding: 0em 2.0em 1.3em 2.0em;
+  position: absolute;
+  bottom:  0em;
+  padding: 0em 2.0em 1.3em 2.0em;
+}
+
+#headerintro {
+  float: right;
+  width: 18em;
+  padding: 1em;
+/*  margin: 0px 0 0 500px; */
+  padding-top: 40px; 
+  color: #fff
 }
 
 #main {
@@ -233,52 +222,11 @@ font: normal 2em Trebuchet MS;
 color: #777;
 }
 
-#headercontent h2
-{
-font-size: 1.0em;
-font-weight: normal;
-color: #CB8700;
+h2 a {
+  text-decoration: none;
+  font-weight: normal;
 }
 
-#search
-{
-position: absolute;
-top: 5.5em;
-right: 2.0em;
-padding-right: 0.0em;
-}
-
-#search input.text
-{
-margin-right: 0.5em;
-vertical-align: middle;
-border-top: solid 1px #000000;
-border-right: 0px;
-border-bottom: solid 1px #777777;
-border-left: 0px;
-padding: 0.15em;
-width: 10.0em;
-}
-
-#search input.submit
-{
-background: #939B00 url('images/buttonbg.gif') repeat-x;
-border: solid 1px #5F6800;
-font-weight: bold;
-padding: 0.25em;
-font-size: 0.8em;
-color: #F2F3DE;
-vertical-align: middle;
-}
-
-#headerpic
-{
-position: relative;
-xheight: 109px;
-xbackground: #fff url('images/harvest-purple.jpg') no-repeat 0 -150px;
-background: #fff url('images/hands.jpg') no-repeat center -500px;
-margin-bottom: 2px;
-}
 
 #menu
 {
@@ -292,23 +240,17 @@ margin: 0 0 1em 0;
 }
 
 #menu ul {
-/*position: absolute;*/
-/*top: 1em;*/
+  margin: 0;
 }
 
-#menu ul li
-{
-  xpadding: 0.6em 0;
-/*position: relative;*/
-display: inline;
-/*float: left;*/
+#menu ul li {
+  display: inline;
 }
 
-#menu ul li a
-{
-padding: 0.8em 1em;
-color: #fff;
-text-decoration: none;
+#menu ul li a {
+  padding: 0.8em 1em;
+  color: #fff;
+  text-decoration: none;
 }
 
 #menu ul li a:hover
@@ -333,28 +275,33 @@ height: 14px;
 margin-bottom: 1.5em;
 }
 
-#content
-{
-padding: 0em 2.0em 0em 2.0em;
+#content {
+  padding: 0.5em 2.0em 0em 2.0em;
 }
 
-#primarycontainer
-{
-float: left;
-margin-right: -18.0em;
-width: 100%;
+#content h2 {
+  font: normal 2.2em "Myriad Pro", "Lucida Grande", Arial, sans-serif;
+  color: #B15A2D;
+  line-height: 1;
 }
 
-#primarycontent
-{
-margin: 0 20.0em 0em 0em;
+.article span.stamp {
+  color: #C2854E;
+  color: #CB8700;
 }
 
-#secondarycontent
-{
-margin-top: 4.5em;
-float: right;
-width: 18.0em;
+#primarycontent {
+  margin: 0 20.0em 0em 0em;
+}
+
+#secondarycontent {
+  clear: right;
+  float: right;
+  width: 18.0em;
+}
+
+#secondarycontent h2 {
+  font-size: 1.8em;
 }
 
 #footer
@@ -391,4 +338,19 @@ bottom: 1.2em;
   padding: 1.5em;
   margin: 0 0 1em;
 /*  opacity: 0.5;*/
+}
+
+.article {
+  margin: 10px 0 40px 0;
+}
+
+.article .header {
+  padding-bottom: 5px;
+  border-bottom: solid 1px #E1D2BD;
+  border-color: #eaeaea;
+/*  margin-bottom: 1.0em;*/
+}
+
+.articles ul {
+  color: #E1D2BD;
 }

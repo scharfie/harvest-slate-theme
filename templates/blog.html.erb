@@ -1,0 +1,11 @@
+<% content_for_variable :extra do %>
+  <div class="box articles">
+    <%= partial(:recent_articles) %>
+    <br />
+    <%= partial(:archives) %>
+  </div>  
+<% end %>  
+
+<%= partial :header %>
+<%= blog_engine %>
+<%= partial :footer %>

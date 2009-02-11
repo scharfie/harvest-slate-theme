@@ -1,0 +1,17 @@
+<div class="article">
+  <%= article_tools(article) %>
+  <div class="header">
+    <h2><%= article_link article %></h2>
+    <span class="stamp"><%= article_date article %></span>
+  </div>
+  <div class="body">
+    <%= article.body_html %>
+  </div>
+  <div class="footer">
+    <%#= article_link article, :text => 'Permalink'  %>
+  </div>
+  
+  <% if periodical_by_slug? %>
+    <% title article.name %>
+  <% end %>  
+</div>
